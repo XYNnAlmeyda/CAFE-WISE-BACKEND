@@ -1,0 +1,21 @@
+[
+  {
+    "user_id": "5a43c6ad-1f1b-4f12-96e1-0cce4f54c116",
+    "user_name": "krisha",
+    "user_role": "ADMIN",
+    "action_type": "RECIPE",
+    "action_title": "Removed Ingredient from Recipe",
+    "details": "Removed 'Iodized Salt' from 'Fries - Salt' recipe",
+    "created_at": "2026-08-09T22:23:36.761723+08:00"
+  },
+  {
+    "user_id": "5a43c6ad-1f1b-4f12-96e1-0cce4f54c116",
+    "user_name": "krisha",
+    "user_role": "ADMIN",
+    "action_type": "RECIPE",
+    "action_title": "Removed Ingredient from Recipe",
+    "details": "Removed 'test1' from 'Melon' recipe",
+    "created_at": "2026-08-06T11:08:07.970069+08:00"
+  }
+]
+]

@@ -63,6 +63,17 @@ app.include_router(shifts_router)
 def read_root():
     return {"message": "Welcome to the CafeWise Python Backend"}
 
+@app.get("/api/debug-config")
+def debug_config():
+    from .config import service_key, url, key
+    return {
+        "has_url": bool(url),
+        "has_key": bool(key),
+        "has_service_key": bool(service_key),
+        "service_key_length": len(service_key) if service_key else 0,
+        "service_key_prefix": service_key[:10] + "..." if service_key else "NONE"
+    }
+
 # ─────────────────────────────────────────────
 # Server Startup
 # ─────────────────────────────────────────────

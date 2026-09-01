@@ -57,6 +57,8 @@ app.include_router(activity_router)
 app.include_router(shifts_router)
 
 @app.get("/")
+@app.get("/api")
+@app.get("/api/index.py")
 def read_root():
     return {"message": "Welcome to the CafeWise Python Backend"}
 

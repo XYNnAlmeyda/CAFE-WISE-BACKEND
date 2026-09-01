@@ -22,7 +22,7 @@ app = FastAPI(title="CafeWise API")
 # CORS_ORIGIN env var: set this in Vercel dashboard to your frontend URL
 # e.g. https://houseblend-frontend.vercel.app
 _cors_env = os.environ.get("CORS_ORIGIN", "")
-_extra_origins = [o.strip() for o in _cors_env.split(",") if o.strip()]
+_extra_origins = [o.strip().rstrip("/") for o in _cors_env.split(",") if o.strip()]
 
 _allowed_origins = list(set([
     "http://localhost:5173",
@@ -32,6 +32,7 @@ _allowed_origins = list(set([
     "http://192.168.3.188:5173",
     "http://192.168.3.188:5174",
     "https://houseblend-frontend.vercel.app",
+    "https://cafe-wise-frontend-ofk8.vercel.app",
 ] + _extra_origins))
 
 app.add_middleware(
